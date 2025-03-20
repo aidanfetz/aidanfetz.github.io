@@ -1,0 +1,183 @@
+/* General Reset and Box Model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.header .IMG img {
+    width: 150px;
+    height: auto;
+}
+
+.header .Nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.header .Nav ul li {
+    margin: 0 15px;
+    color: #fff;
+    cursor: pointer;
+}
+.header .Nav ul a{
+    text-decoration: none;
+    color: #fff;
+    
+}
+.header .Nav ul a:hover {
+    color: #fdf643;
+    transition: ease, .5s;
+}
+
+/* Main Section */
+.main {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.schedule,
+.info,
+.Items {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.items ul{
+    float: left;
+}
+.Items img{
+    width: 50%;
+}
+
+.info img{
+    width: 100%
+}
+
+.schedule img{
+    width:100%;
+}
+
+.info a{
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color:black;
+}
+
+.info a:hover{
+    color:#fdf643;
+    text-shadow: 2px 2px 4px #000000;
+    transition: ease, .5s;
+}
+
+.schedule p,
+.info p,
+.Items p,
+.onLot p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+.Items ul li {
+    font-size: 16px;
+}
+
+/* Updated onLot Section */
+.onLot {
+    grid-column: span 3; /* Makes onLot span the entire screen width */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.onLot p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.onLot ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.onLot ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.onLot img {
+    width: 100%; /* Making the images a bit larger */
+    height: 100%;
+    object-fit: cover;
+    margin-top: 15px;
+}
+
+/* Tractor Image */
+.tractor_IMG {
+    grid-column: span 3;
+    text-align: center;
+}
+
+.tractor_IMG img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .main {
+        grid-template-columns: 1fr;
+    }
+
+    .onLot ul {
+        grid-template-columns: 1fr;
+    }
+
+    .header .Nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header .Nav ul li {
+        margin: 10px 0;
+    }
+}
